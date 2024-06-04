@@ -1,8 +1,8 @@
 <?php
+#Se cargan los datos para conectar a la base de datos
 require_once("config/conexion.php");
+#Se traen desde la tabla landings los datos para armar el menú de acceso
 $sql = mysqli_query($con, "SELECT * FROM iflow_dash.landings;");
-#$row = mysqli_fetch_assoc($sql);
-$result = [];
 while ($row = mysqli_fetch_assoc($sql)) {
 	$data[] = $row;
 }
@@ -31,121 +31,7 @@ if (empty($data)) {
 	<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 	<link rel="stylesheet" href="dist/css/adminlte.min.css?v=3.2.0">
 	<script defer="" referrerpolicy="origin" src="/cdn-cgi/zaraz/s.js?z=JTdCJTIyZXhlY3V0ZWQlMjIlM0ElNUIlNUQlMkMlMjJ0JTIyJTNBJTIyQWRtaW5MVEUlMjAzJTIwJTdDJTIwRGFzaGJvYXJkJTIwMyUyMiUyQyUyMnglMjIlM0EwLjM4MjI0ODY0ODMzMzAxNzY0JTJDJTIydyUyMiUzQTE0NDAlMkMlMjJoJTIyJTNBOTAwJTJDJTIyaiUyMiUzQTUzMyUyQyUyMmUlMjIlM0ExMjkxJTJDJTIybCUyMiUzQSUyMmh0dHBzJTNBJTJGJTJGYWRtaW5sdGUuaW8lMkZ0aGVtZXMlMkZ2MyUyRmluZGV4My5odG1sJTIyJTJDJTIyciUyMiUzQSUyMmh0dHBzJTNBJTJGJTJGYWRtaW5sdGUuaW8lMkZ0aGVtZXMlMkZ2MyUyRmluZGV4Mi5odG1sJTIyJTJDJTIyayUyMiUzQTMwJTJDJTIybiUyMiUzQSUyMlVURi04JTIyJTJDJTIybyUyMiUzQTE4MCUyQyUyMnElMjIlM0ElNUIlNUQlN0Q="></script>
-	<script nonce="8a6b1ab9-2679-42ae-a14d-ce790e688dca">
-		try {
-			(function(w, d) {
-				! function(j, k, l, m) {
-					j[l] = j[l] || {};
-					j[l].executed = [];
-					j.zaraz = {
-						deferred: [],
-						listeners: []
-					};
-					j.zaraz._v = "5671";
-					j.zaraz.q = [];
-					j.zaraz._f = function(n) {
-						return async function() {
-							var o = Array.prototype.slice.call(arguments);
-							j.zaraz.q.push({
-								m: n,
-								a: o
-							})
-						}
-					};
-					for (const p of ["track", "set", "debug"]) j.zaraz[p] = j.zaraz._f(p);
-					j.zaraz.init = () => {
-						var q = k.getElementsByTagName(m)[0],
-							r = k.createElement(m),
-							s = k.getElementsByTagName("title")[0];
-						s && (j[l].t = k.getElementsByTagName("title")[0].text);
-						j[l].x = Math.random();
-						j[l].w = j.screen.width;
-						j[l].h = j.screen.height;
-						j[l].j = j.innerHeight;
-						j[l].e = j.innerWidth;
-						j[l].l = j.location.href;
-						j[l].r = k.referrer;
-						j[l].k = j.screen.colorDepth;
-						j[l].n = k.characterSet;
-						j[l].o = (new Date).getTimezoneOffset();
-						if (j.dataLayer)
-							for (const w of Object.entries(Object.entries(dataLayer).reduce(((x, y) => ({
-									...x[1],
-									...y[1]
-								})), {}))) zaraz.set(w[0], w[1], {
-								scope: "page"
-							});
-						j[l].q = [];
-						for (; j.zaraz.q.length;) {
-							const z = j.zaraz.q.shift();
-							j[l].q.push(z)
-						}
-						r.defer = !0;
-						for (const A of [localStorage, sessionStorage]) Object.keys(A || {}).filter((C => C.startsWith("_zaraz_"))).forEach((B => {
-							try {
-								j[l]["z_" + B.slice(7)] = JSON.parse(A.getItem(B))
-							} catch {
-								j[l]["z_" + B.slice(7)] = A.getItem(B)
-							}
-						}));
-						r.referrerPolicy = "origin";
-						r.src = "/cdn-cgi/zaraz/s.js?z=" + btoa(encodeURIComponent(JSON.stringify(j[l])));
-						q.parentNode.insertBefore(r, q)
-					};
-					["complete", "interactive"].includes(k.readyState) ? zaraz.init() : j.addEventListener("DOMContentLoaded", zaraz.init)
-				}(w, d, "zarazData", "script");
-			})(window, document)
-		} catch (e) {
-			throw fetch("/cdn-cgi/zaraz/t"), e;
-		};
-	</script>
-	<style type="text/css">
-		/* Chart.js */
-		@keyframes chartjs-render-animation {
-			from {
-				opacity: .99
-			}
-
-			to {
-				opacity: 1
-			}
-		}
-
-		.chartjs-render-monitor {
-			animation: chartjs-render-animation 1ms
-		}
-
-		.chartjs-size-monitor,
-		.chartjs-size-monitor-expand,
-		.chartjs-size-monitor-shrink {
-			position: absolute;
-			direction: ltr;
-			left: 0;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			overflow: hidden;
-			pointer-events: none;
-			visibility: hidden;
-			z-index: -1
-		}
-
-		.chartjs-size-monitor-expand>div {
-			position: absolute;
-			width: 1000000px;
-			height: 1000000px;
-			left: 0;
-			top: 0
-		}
-
-		.chartjs-size-monitor-shrink>div {
-			position: absolute;
-			width: 200%;
-			height: 200%;
-			left: 0;
-			top: 0
-		}
-	</style>
+	<script src="/js/zaraz.js" nonce="8a6b1ab9-2679-42ae-a14d-ce790e688dca"></script>
 </head>
 
 <body class="layout-fixed sidebar-mini">
@@ -154,8 +40,11 @@ if (empty($data)) {
 			<ul class="navbar-nav">
 				<li class="nav-item">
 					<span class="nav-link" data-widget="pushmenu" href="#">
-						<i class="fas fa-bars" style="color: white"><span style="font-size: 1.25rem; color: white">
-								Landing Page Tiendas de IFLOW</span></i>
+						<i class="fas fa-bars" style="color: white">
+							<span style="font-size: 1.25rem; color: white">
+								Landing Page Tiendas de IFLOW
+							</span>
+						</i>
 					</span>
 				</li>
 			</ul>
@@ -164,12 +53,11 @@ if (empty($data)) {
 			<a href="home" style="background-color: black" class="brand-link logo-switch">
 				<img src="assets/img/logoIf.png" alt="Iflow Logo" class="brand-image-xs logo-xl" />
 			</a>
+			<!-- INICIO SIDEBAR -->
 			<div class="sidebar">
-
-
 				<nav class="mt-2">
-					<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-
+					<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false" style="margin-top:50px;">
+						<!-- FOREACH QUE RECORRE LA TABLA PARA ARMAR EL MENÚ LATERAL -->
 						<?php foreach ($data as $item) : ?>
 							<li class="nav-item">
 								<a href="#" class="nav-link">
@@ -199,6 +87,7 @@ if (empty($data)) {
 				</nav>
 			</div>
 		</aside>
+		<!-- INICIO PAGINA ESTADISTICAS -->
 		<div class="content-wrapper" style="padding-top: 25px">
 			<div class="content">
 				<div class="container-fluid">
@@ -352,5 +241,4 @@ if (empty($data)) {
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="dist/js/demo.js"></script>
 <script src="dist/js/pages/dashboard3.js"></script>
-
 </html>
