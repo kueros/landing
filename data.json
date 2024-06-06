@@ -2,7 +2,7 @@
 	"data": {
 		"exito": {
 			"tipo_orden": "Ordenes enviadas exitosamente",
-			"datos": 300
+			"datos": 250
 		},
 		"entregadas": {
 			"tipo_orden": "Ordenes entregadas",
@@ -10,11 +10,11 @@
 		},
 		"transito": {
 			"tipo_orden": "Ordenes en transito",
-			"datos": 300
+			"datos": 575
 		},
 		"no_procesadas": {
 			"tipo_orden": "Ordenes NO procesadas",
-			"datos": 300
+			"datos": 480
 		}
 	}
 }

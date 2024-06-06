@@ -15,7 +15,7 @@ if (empty($data)) {
 $json_data = file_get_contents('data.json');
 
 // Decodificar el JSON
-$data = json_decode($json_data, true);
+$tarjetas = json_decode($json_data, true);
 
 ?>
 <!DOCTYPE html>
@@ -101,18 +101,18 @@ $data = json_decode($json_data, true);
 					<div class="row">
 
 						<?php
-						foreach ($data as $key => $dato) :
+						foreach ($tarjetas as $key => $dato) :
 						?>
 
 
 							<div class="col-lg-3 col-6">
-								<div class="small-box bg-info">
+								<div class="small-box bg-success">
 									<div class="inner">
 										<h3><?php echo $dato["exito"]["datos"]; ?></h3>
 										<p><?php echo $dato["exito"]["tipo_orden"]; ?></p>
 									</div>
 									<div class="icon">
-										<i class="ion ion-bag"></i>
+										<i class="fas fa-check"></i>
 									</div>
 									<!--a href="#" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a-->
 								</div>
@@ -125,38 +125,38 @@ $data = json_decode($json_data, true);
 										<p><?php echo $dato["entregadas"]["tipo_orden"]; ?></p>
 									</div>
 									<div class="icon">
-										<i class="ion ion-bag"></i>
+										<i class="fas fa-thumbs-up"></i>
 									</div>
 									<!--a href="#" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a-->
 								</div>
 							</div>
 
 							<div class="col-lg-3 col-6">
-								<div class="small-box bg-info">
+								<div class="small-box bg-warning">
 									<div class="inner">
 										<h3><?php echo $dato["transito"]["datos"]; ?></h3>
 										<p><?php echo $dato["transito"]["tipo_orden"]; ?></p>
 									</div>
 									<div class="icon">
-										<i class="ion ion-bag"></i>
+										<i class="fas fa-truck-moving"></i>
 									</div>
 									<!--a href="#" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a-->
 								</div>
 							</div>
 
 							<div class="col-lg-3 col-6">
-								<div class="small-box bg-info">
+								<div class="small-box bg-danger">
 									<div class="inner">
 										<h3><?php echo $dato["no_procesadas"]["datos"]; ?></h3>
 										<p><?php echo $dato["no_procesadas"]["tipo_orden"]; ?></p>
 									</div>
 									<div class="icon">
-										<i class="ion ion-bag"></i>
+										<i class="fas fa-exclamation-triangle"></i>
 									</div>
 									<!--a href="#" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a-->
 								</div>
 							</div>
-						
+
 						<?php endforeach;
 						?>
 
