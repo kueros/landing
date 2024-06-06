@@ -1,0 +1,20 @@
+{
+	"data": {
+		"devolucion": {
+			"tipo_orden": "Ordenes enviadas exitosamente",
+			"datos": 300
+		},
+		"entregadas": {
+			"tipo_orden": "Ordenes entregadas",
+			"datos": 300
+		},
+		"transito": {
+			"tipo_orden": "Ordenes en transito",
+			"datos": 300
+		},
+		"no_procesadas": {
+			"tipo_orden": "Ordenes NO procesadas",
+			"datos": 300
+		}
+	}
+}

@@ -32,8 +32,7 @@ if (empty($data)) {
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
 	<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 	<link rel="stylesheet" href="dist/css/adminlte.min.css?v=3.2.0">
-	<script defer="" referrerpolicy="origin" src="/cdn-cgi/zaraz/s.js?z=JTdCJTIyZXhlY3V0ZWQlMjIlM0ElNUIlNUQlMkMlMjJ0JTIyJTNBJTIyQWRtaW5MVEUlMjAzJTIwJTdDJTIwRGFzaGJvYXJkJTIwMyUyMiUyQyUyMnglMjIlM0EwLjM4MjI0ODY0ODMzMzAxNzY0JTJDJTIydyUyMiUzQTE0NDAlMkMlMjJoJTIyJTNBOTAwJTJDJTIyaiUyMiUzQTUzMyUyQyUyMmUlMjIlM0ExMjkxJTJDJTIybCUyMiUzQSUyMmh0dHBzJTNBJTJGJTJGYWRtaW5sdGUuaW8lMkZ0aGVtZXMlMkZ2MyUyRmluZGV4My5odG1sJTIyJTJDJTIyciUyMiUzQSUyMmh0dHBzJTNBJTJGJTJGYWRtaW5sdGUuaW8lMkZ0aGVtZXMlMkZ2MyUyRmluZGV4Mi5odG1sJTIyJTJDJTIyayUyMiUzQTMwJTJDJTIybiUyMiUzQSUyMlVURi04JTIyJTJDJTIybyUyMiUzQTE4MCUyQyUyMnElMjIlM0ElNUIlNUQlN0Q="></script>
-	<script src="/js/zaraz.js" nonce="8a6b1ab9-2679-42ae-a14d-ce790e688dca"></script>
+
 </head>
 
 <body class="layout-fixed sidebar-mini">
@@ -217,7 +216,11 @@ if (empty($data)) {
 												<div class=""></div>
 											</div>
 										</div>
+
+
 										<canvas id="sales-chart" height="440" style="display: block; height: 200px; width: 451px;" width="992" class="chartjs-render-monitor"></canvas>
+
+
 									</div>
 									<div class="d-flex flex-row justify-content-end">
 										<span class="mr-2">

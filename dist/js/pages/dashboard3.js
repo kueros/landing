@@ -1,5 +1,21 @@
 $(function(){'use strict'
 
+
+	fetch('data.json')
+		.then(response => response.json())
+		.then(data => {
+			// Procesar el JSON
+			for (const key in data.data) {
+				if (data.data.hasOwnProperty(key)) {
+					const tipoOrden = data.data[key].tipo_orden;
+					const datos = data.data[key].datos;
+					console.log(`Tipo de Orden: ${tipoOrden}, Datos: ${datos}`);
+				}
+			}
+		})
+		.catch(error => console.error('Error al cargar el JSON:', error));
+
+
 var ticksStyle={fontColor:'#495057',fontStyle:'bold'}
 
 var mode='index'
@@ -11,20 +27,21 @@ var intersect=true
 var $salesChart=$('#sales-chart')
 
 var salesChart = new Chart($salesChart,{type:'bar',
-                                        data:{labels:['JUN','JUL','AUG','SEP','OCT','NOV','DEC'],
+	data: {
+		labels: ['JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC', 'ENE'],
 
                                         datasets:[{backgroundColor:'#007bff',borderColor:'#007bff',
-                                                   data:[100,200,300,250,270,250,300]
+													data: [100, 200, 300, 250, 270, 250, 300, 340]
                                                    }, // sh
 
                                                   {backgroundColor:'#ced4da', borderColor:'#ced4da',
-                                                    data:[700,170,270,200,180,150,200]}, // woo
+                                                    data:[700,170,270,200,180,150,200,275]}, // woo
 
                                                     {backgroundColor:'#ced4df', borderColor:'#ced4df',
-                                                    data:[700,170,270,200,180,150,200]},  // TN
+                                                    data:[700,170,270,200,180,150,200,380]},  // TN
 
                                                   {backgroundColor:'#007bff',borderColor:'#007bff',
-                                                   data:[100,200,300,250,270,250,300] } // ID
+                                                   data:[100,200,300,250,270,250,300,550] } // ID
                                         
                                                 ]
                                         },
