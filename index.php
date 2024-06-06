@@ -1,4 +1,6 @@
 <?php
+error_reporting(0);
+
 #Se cargan los datos para conectar a la base de datos
 require_once("config/conexion.php");
 #Se traen desde la tabla landings los datos para armar el menú de acceso
@@ -96,7 +98,7 @@ if (empty($data)) {
 							<div class="small-box bg-info">
 								<div class="inner">
 									<h3>150</h3>
-									<p>Nuevas Órdenes</p>
+									<p>En proceso de devolucion</p>
 								</div>
 								<div class="icon">
 									<i class="ion ion-bag"></i>
@@ -107,8 +109,8 @@ if (empty($data)) {
 						<div class="col-lg-3 col-6">
 							<div class="small-box bg-success">
 								<div class="inner">
-									<h3>53<sup style="font-size: 20px">%</sup></h3>
-									<p>Nuevos Clientes</p>
+									<h3>53</h3>
+									<p>Ordenes Entregadas</p>
 								</div>
 								<div class="icon">
 									<i class="ion ion-stats-bars"></i>
@@ -120,7 +122,7 @@ if (empty($data)) {
 							<div class="small-box bg-warning">
 								<div class="inner">
 									<h3>44</h3>
-									<p>Nuevas Tiendas Activas</p>
+									<p>Ordenes en Transito.</p>
 								</div>
 								<div class="icon">
 									<i class="ion ion-person-add"></i>
@@ -132,7 +134,7 @@ if (empty($data)) {
 							<div class="small-box bg-danger">
 								<div class="inner">
 									<h3>65</h3>
-									<p>Nuevas Instalaciones</p>
+									<p>Ordenes NO Procesadas</p>
 								</div>
 								<div class="icon">
 									<i class="ion ion-pie-graph"></i>
@@ -189,7 +191,7 @@ if (empty($data)) {
 							<div class="card">
 								<div class="card-header border-0">
 									<div class="d-flex justify-content-between">
-										<h3 class="card-title">Órdenes Fullfillment</h3>
+										<h3 class="card-title">Ordenes</h3>
 										<a href="javascript:void(0);">Ver Reporte</a>
 									</div>
 								</div>
@@ -201,9 +203,9 @@ if (empty($data)) {
 										</p>
 										<p class="ml-auto d-flex flex-column text-right">
 											<span class="text-success">
-												<i class="fas fa-arrow-up"></i> 33.1%
+												<i class="fas fa-arrow-up"></i> 3.1%
 											</span>
-											<span class="text-muted">Desde el último mes</span>
+											<span class="text-muted">últimos 6 meses</span>
 										</p>
 									</div>
 									<div class="position-relative mb-4">
