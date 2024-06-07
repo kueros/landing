@@ -171,11 +171,10 @@ $tarjetas = json_decode($json_data, true);
 
 						<?php endforeach;
 						?>
-
-
-
 					</div>
+
 					<div class="row">
+
 						<div class="col-lg-6">
 							<div class="card">
 								<div class="card-header border-0">
@@ -210,15 +209,19 @@ $tarjetas = json_decode($json_data, true);
 									</div>
 									<div class="d-flex flex-row justify-content-end">
 										<span class="mr-2">
-											<i class="fas fa-square text-primary"></i> Esta Semana
+											<i class="fas fa-square " style="color: #78B258; border-color: #78B258"></i> Shopify
 										</span>
-										<span>
-											<i class="fas fa-square text-gray"></i> Última Semana
+										<span class="mr-2">
+											<i class="fas fa-square" style="color: #0050C3; border-color: #0050C3"></i> TiendaNube
+										</span>
+										<span class="mr-2">
+											<i class="fas fa-square" style="color: #9A5C8E; border-color: #9A5C8E"></i> WooCommerce
 										</span>
 									</div>
 								</div>
 							</div>
 						</div>
+
 						<div class="col-lg-6">
 							<div class="card">
 								<div class="card-header border-0">
@@ -249,23 +252,164 @@ $tarjetas = json_decode($json_data, true);
 												<div class=""></div>
 											</div>
 										</div>
-
-
 										<canvas id="sales-chart" height="440" style="display: block; height: 200px; width: 451px;" width="992" class="chartjs-render-monitor"></canvas>
-
-
 									</div>
 									<div class="d-flex flex-row justify-content-end">
 										<span class="mr-2">
-											<i class="fas fa-square text-primary"></i> Este año
+											<i class="fas fa-square " style="color: #78B258; border-color: #78B258"></i> Shopify
 										</span>
-										<span>
-											<i class="fas fa-square text-gray"></i> Último año
+										<span class="mr-2">
+											<i class="fas fa-square" style="color: #0050C3; border-color: #0050C3"></i> TiendaNube
+										</span>
+										<span class="mr-2">
+											<i class="fas fa-square" style="color: #9A5C8E; border-color: #9A5C8E"></i> WooCommerce
 										</span>
 									</div>
 								</div>
 							</div>
 						</div>
+
+						<div class="col-lg-4">
+							<div class="card">
+								<div class="card-header border-0">
+									<div class="d-flex justify-content-between">
+										<h3 class="card-title">Ordenes</h3>
+										<a href="javascript:void(0);">Ver Reporte</a>
+									</div>
+								</div>
+								<div class="card-body">
+									<div class="d-flex">
+										<p class="d-flex flex-column">
+											<span class="text-bold text-lg">230.00</span>
+											<span>Órdenes en el tiempo</span>
+										</p>
+										<p class="ml-auto d-flex flex-column text-right">
+											<span class="text-success">
+												<i class="fas fa-arrow-up"></i> 3.1%
+											</span>
+											<span class="text-muted">últimos 6 meses</span>
+										</p>
+									</div>
+									<div class="position-relative mb-4">
+										<div class="chartjs-size-monitor">
+											<div class="chartjs-size-monitor-expand">
+												<div class=""></div>
+											</div>
+											<div class="chartjs-size-monitor-shrink">
+												<div class=""></div>
+											</div>
+										</div>
+										<canvas id="piechart1" height="440" style="display: block; height: 200px; width: 451px;" width="992" class="chartjs-render-monitor"></canvas>
+									</div>
+									<div class="d-flex flex-row justify-content-end">
+										<span class="mr-2">
+											<i class="fas fa-square " style="color: #78B258; border-color: #78B258"></i> Shopify
+										</span>
+										<span class="mr-2">
+											<i class="fas fa-square" style="color: #0050C3; border-color: #0050C3"></i> TiendaNube
+										</span>
+										<span class="mr-2">
+											<i class="fas fa-square" style="color: #9A5C8E; border-color: #9A5C8E"></i> WooCommerce
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-4">
+							<div class="card">
+								<div class="card-header border-0">
+									<div class="d-flex justify-content-between">
+										<h3 class="card-title">Ordenes</h3>
+										<a href="javascript:void(0);">Ver Reporte</a>
+									</div>
+								</div>
+								<div class="card-body">
+									<div class="d-flex">
+										<p class="d-flex flex-column">
+											<span class="text-bold text-lg">230.00</span>
+											<span>Órdenes en el tiempo</span>
+										</p>
+										<p class="ml-auto d-flex flex-column text-right">
+											<span class="text-success">
+												<i class="fas fa-arrow-up"></i> 3.1%
+											</span>
+											<span class="text-muted">últimos 6 meses</span>
+										</p>
+									</div>
+									<div class="position-relative mb-4">
+										<div class="chartjs-size-monitor">
+											<div class="chartjs-size-monitor-expand">
+												<div class=""></div>
+											</div>
+											<div class="chartjs-size-monitor-shrink">
+												<div class=""></div>
+											</div>
+										</div>
+										<canvas id="piechart2" height="440" style="display: block; height: 200px; width: 451px;" width="992" class="chartjs-render-monitor"></canvas>
+									</div>
+									<div class="d-flex flex-row justify-content-end">
+										<span class="mr-2">
+											<i class="fas fa-square " style="color: #78B258; border-color: #78B258"></i> Shopify
+										</span>
+										<span class="mr-2">
+											<i class="fas fa-square" style="color: #0050C3; border-color: #0050C3"></i> TiendaNube
+										</span>
+										<span class="mr-2">
+											<i class="fas fa-square" style="color: #9A5C8E; border-color: #9A5C8E"></i> WooCommerce
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-4">
+							<div class="card">
+								<div class="card-header border-0">
+									<div class="d-flex justify-content-between">
+										<h3 class="card-title">Ordenes</h3>
+										<a href="javascript:void(0);">Ver Reporte</a>
+									</div>
+								</div>
+								<div class="card-body">
+									<div class="d-flex">
+										<p class="d-flex flex-column">
+											<span class="text-bold text-lg">230.00</span>
+											<span>Órdenes en el tiempo</span>
+										</p>
+										<p class="ml-auto d-flex flex-column text-right">
+											<span class="text-success">
+												<i class="fas fa-arrow-up"></i> 3.1%
+											</span>
+											<span class="text-muted">últimos 6 meses</span>
+										</p>
+									</div>
+									<div class="position-relative mb-4">
+										<div class="chartjs-size-monitor">
+											<div class="chartjs-size-monitor-expand">
+												<div class=""></div>
+											</div>
+											<div class="chartjs-size-monitor-shrink">
+												<div class=""></div>
+											</div>
+										</div>
+										<canvas id="piechart3" height="440" style="display: block; height: 200px; width: 451px;" width="992" class="chartjs-render-monitor"></canvas>
+									</div>
+									<div class="d-flex flex-row justify-content-end">
+										<span class="mr-2">
+											<i class="fas fa-square " style="color: #78B258; border-color: #78B258"></i> Shopify
+										</span>
+										<span class="mr-2">
+											<i class="fas fa-square" style="color: #0050C3; border-color: #0050C3"></i> TiendaNube
+										</span>
+										<span class="mr-2">
+											<i class="fas fa-square" style="color: #9A5C8E; border-color: #9A5C8E"></i> WooCommerce
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
 					</div>
 				</div>
 			</div>
