@@ -128,6 +128,9 @@ if (empty($data)) {
 					<div class="row">
 						<div class="col-lg-3 col-6">
 							<div class="small-box bg-info">
+								<div class="overlay">
+									<i></i>
+								</div>
 								<div class="inner">
 									<h3>150</h3>
 									<p>En proceso de devolucion</p>
@@ -139,7 +142,10 @@ if (empty($data)) {
 							</div>
 						</div>
 						<div class="col-lg-3 col-6">
-							<div class="small-box bg-success">
+							<div class="small-box bg-success ">
+								<div class="overlay">
+									<i></i>
+								</div>
 								<div class="inner">
 									<h3>53</h3>
 									<p>Ordenes Entregadas</p>
@@ -152,6 +158,9 @@ if (empty($data)) {
 						</div>
 						<div class="col-lg-3 col-6">
 							<div class="small-box bg-warning">
+								<div class="overlay">
+									<i></i>
+								</div>
 								<div class="inner">
 									<h3>44</h3>
 									<p>Ordenes en Transito.</p>
@@ -164,6 +173,9 @@ if (empty($data)) {
 						</div>
 						<div class="col-lg-3 col-6">
 							<div class="small-box bg-danger">
+								<div class="overlay">
+									<i></i>
+								</div>
 								<div class="inner">
 									<h3>65</h3>
 									<p>Ordenes NO Procesadas</p>
