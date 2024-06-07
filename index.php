@@ -107,6 +107,9 @@ $tarjetas = json_decode($json_data, true);
 
 							<div class="col-lg-3 col-6">
 								<div class="small-box bg-success">
+									<div class="overlay">
+										<i></i>
+									</div>
 									<div class="inner">
 										<h3><?php echo $dato["exito"]["datos"]; ?></h3>
 										<p><?php echo $dato["exito"]["tipo_orden"]; ?></p>
@@ -120,6 +123,9 @@ $tarjetas = json_decode($json_data, true);
 
 							<div class="col-lg-3 col-6">
 								<div class="small-box bg-info">
+									<div class="overlay">
+										<i></i>
+									</div>
 									<div class="inner">
 										<h3><?php echo $dato["entregadas"]["datos"]; ?></h3>
 										<p><?php echo $dato["entregadas"]["tipo_orden"]; ?></p>
@@ -133,6 +139,9 @@ $tarjetas = json_decode($json_data, true);
 
 							<div class="col-lg-3 col-6">
 								<div class="small-box bg-warning">
+									<div class="overlay">
+										<i></i>
+									</div>
 									<div class="inner">
 										<h3><?php echo $dato["transito"]["datos"]; ?></h3>
 										<p><?php echo $dato["transito"]["tipo_orden"]; ?></p>
@@ -146,6 +155,9 @@ $tarjetas = json_decode($json_data, true);
 
 							<div class="col-lg-3 col-6">
 								<div class="small-box bg-danger">
+									<div class="overlay">
+										<i></i>
+									</div>
 									<div class="inner">
 										<h3><?php echo $dato["no_procesadas"]["datos"]; ?></h3>
 										<p><?php echo $dato["no_procesadas"]["tipo_orden"]; ?></p>
