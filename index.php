@@ -222,10 +222,13 @@ if (empty($data)) {
 									</div>
 									<div class="d-flex flex-row justify-content-end">
 										<span class="mr-2">
-											<i class="fas fa-square text-primary"></i> Esta Semana
+											<i class="fas fa-square " style="color: #78B258; border-color: #78B258"></i> Shopify
 										</span>
-										<span>
-											<i class="fas fa-square text-gray"></i> Última Semana
+										<span class="mr-2">
+											<i class="fas fa-square" style="color: #0050C3; border-color: #0050C3"></i> TiendaNube
+										</span>
+										<span class="mr-2">
+											<i class="fas fa-square" style="color: #9A5C8E; border-color: #9A5C8E"></i> WooCommerce
 										</span>
 									</div>
 								</div>
@@ -269,10 +272,13 @@ if (empty($data)) {
 									</div>
 									<div class="d-flex flex-row justify-content-end">
 										<span class="mr-2">
-											<i class="fas fa-square text-primary"></i> Este año
+											<i class="fas fa-square " style="color: #78B258; border-color: #78B258"></i> Shopify
 										</span>
-										<span>
-											<i class="fas fa-square text-gray"></i> Último año
+										<span class="mr-2">
+											<i class="fas fa-square" style="color: #0050C3; border-color: #0050C3"></i> TiendaNube
+										</span>
+										<span class="mr-2">
+											<i class="fas fa-square" style="color: #9A5C8E; border-color: #9A5C8E"></i> WooCommerce
 										</span>
 									</div>
 								</div>
