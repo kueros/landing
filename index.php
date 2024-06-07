@@ -36,6 +36,35 @@ if (empty($data)) {
 </head>
 
 <body class="layout-fixed sidebar-mini">
+	<style>
+		.tooltip-container {
+			position: relative;
+			display: inline-block;
+		}
+
+		.tooltip-text {
+			visibility: hidden;
+			width: 200px;
+			background-color: #000;
+			color: #fff;
+			text-align: center;
+			border-radius: 6px;
+			padding: 5px;
+			position: absolute;
+			z-index: 1;
+			bottom: 75%;
+			/* Posiciona el tooltip encima del elemento */
+			left: 50%;
+			transform: translateX(-50%);
+			opacity: 0;
+			transition: opacity 0.3s;
+		}
+
+		.tooltip-container:hover .tooltip-text {
+			visibility: visible;
+			opacity: 1;
+		}
+	</style>
 	<div style="height: 100%; ">
 		<nav class="main-header navbar navbar-expand navbar-orange navbar-light">
 			<ul class="navbar-nav">
@@ -57,18 +86,22 @@ if (empty($data)) {
 			<!-- INICIO SIDEBAR -->
 			<div class="sidebar">
 				<nav class="mt-2">
-					<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false" style="margin-top:50px;">
+					<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 						<!-- FOREACH QUE RECORRE LA TABLA PARA ARMAR EL MENÚ LATERAL -->
+
 						<?php foreach ($data as $item) : ?>
-							<li class="nav-item">
-								<a href="#" class="nav-link">
-									<?php echo $item['icono']; ?>
-									<p>
-										<?php echo $item['plataforma']; ?>
-										<i class="right fas fa-angle-left"></i>
-									</p>
-								</a>
-								<ul class="nav nav-treeview" style="display: none;">
+							<li class="nav-item" style="padding-bottom:25px; padding-top:25px;">
+
+								<div class="tooltip-container">
+									<a href="#" class="nav-link">
+										<span style="font-size: xx-large;">
+											<span class="tooltip-text" style="font-size: medium;"><?php echo $item['plataforma']; ?></span>
+											<img src="assets/img/<?php echo $item['icono']; ?>" class="brand-image-xs logo-xl" />
+										</span>
+									</a>
+								</div>
+
+								<ul class="nav nav-treeview" style="display: none; margin-top: 40px;">
 									<li class="nav-item">
 										<a href="<?php echo $item['url_instalador']; ?>" class="nav-link">
 											<i class="far fa-circle nav-icon"></i>
@@ -246,4 +279,5 @@ if (empty($data)) {
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="dist/js/demo.js"></script>
 <script src="dist/js/pages/dashboard3.js"></script>
+
 </html>
