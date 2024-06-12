@@ -301,17 +301,6 @@ $tarjetas = json_decode($json_data, true);
 										</div>
 										<canvas id="piechart1" height="440" style="display: block; height: 200px; width: 451px;" width="992" class="chartjs-render-monitor"></canvas>
 									</div>
-									<div class="d-flex flex-row justify-content-end">
-										<span class="mr-2">
-											<i class="fas fa-square " style="color: #78B258; border-color: #78B258"></i> Shopify
-										</span>
-										<span class="mr-2">
-											<i class="fas fa-square" style="color: #0050C3; border-color: #0050C3"></i> TiendaNube
-										</span>
-										<span class="mr-2">
-											<i class="fas fa-square" style="color: #9A5C8E; border-color: #9A5C8E"></i> WooCommerce
-										</span>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -348,17 +337,6 @@ $tarjetas = json_decode($json_data, true);
 										</div>
 										<canvas id="piechart2" height="440" style="display: block; height: 200px; width: 451px;" width="992" class="chartjs-render-monitor"></canvas>
 									</div>
-									<div class="d-flex flex-row justify-content-end">
-										<span class="mr-2">
-											<i class="fas fa-square " style="color: #78B258; border-color: #78B258"></i> Shopify
-										</span>
-										<span class="mr-2">
-											<i class="fas fa-square" style="color: #0050C3; border-color: #0050C3"></i> TiendaNube
-										</span>
-										<span class="mr-2">
-											<i class="fas fa-square" style="color: #9A5C8E; border-color: #9A5C8E"></i> WooCommerce
-										</span>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -394,17 +372,6 @@ $tarjetas = json_decode($json_data, true);
 											</div>
 										</div>
 										<canvas id="piechart3" height="440" style="display: block; height: 200px; width: 451px;" width="992" class="chartjs-render-monitor"></canvas>
-									</div>
-									<div class="d-flex flex-row justify-content-end">
-										<span class="mr-2">
-											<i class="fas fa-square " style="color: #78B258; border-color: #78B258"></i> Shopify
-										</span>
-										<span class="mr-2">
-											<i class="fas fa-square" style="color: #0050C3; border-color: #0050C3"></i> TiendaNube
-										</span>
-										<span class="mr-2">
-											<i class="fas fa-square" style="color: #9A5C8E; border-color: #9A5C8E"></i> WooCommerce
-										</span>
 									</div>
 								</div>
 							</div>

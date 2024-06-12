@@ -1,3 +1,54 @@
+var $piechart14 = $('#piechart')
+var piechart1 = new Chart($piechart1, {
+	type: 'pie',
+
+	labels: [
+		'Red',
+		'Blue',
+		'Yellow'
+	],
+	datasets: [{
+		label: 'My First Dataset',
+		data: [300, 50, 100],
+		backgroundColor: [
+			'rgb(255, 99, 132)',
+			'rgb(54, 162, 235)',
+			'rgb(255, 205, 86)'
+		],
+		hoverOffset: 4
+	}]
+})
+
+
+
+var $piechart24 = $('#piechart')
+var piechart2 = new Chart($piechart2, {
+	type: 'pie',
+	labels: [
+		'Shopify',
+		'TiendaNube',
+		'WooCommerce'
+	],
+	datasets: [{
+		label: 'My First Dataset',
+		data: [300, 50, 100],
+		backgroundColor: [
+			'rgb(255, 99, 132)',
+			'rgb(54, 162, 235)',
+			'rgb(255, 205, 86)'
+		],
+		hoverOffset: 4
+	}]
+})
+
+
+
+
+
+
+
+
+
 // Do not show lines for all datasets by default
 Chart.defaults.datasets.line.showLine = false;
 
