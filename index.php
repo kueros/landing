@@ -232,13 +232,7 @@ $tarjetas = json_decode($json_data, true);
 										</span>
 										<span class="mr-2">
 											<i class="fas fa-square" style="color: #0050C3; border-color: #0050C3"></i> TiendaNube
-											<i class="fas fa-square " style="color: #78B258; border-color: #78B258"></i> Shopify
 										</span>
-										<span class="mr-2">
-											<i class="fas fa-square" style="color: #0050C3; border-color: #0050C3"></i> TiendaNube
-										</span>
-										<span class="mr-2">
-											<i class="fas fa-square" style="color: #9A5C8E; border-color: #9A5C8E"></i> WooCommerce
 										<span class="mr-2">
 											<i class="fas fa-square" style="color: #9A5C8E; border-color: #9A5C8E"></i> WooCommerce
 										</span>
