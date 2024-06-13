@@ -5,7 +5,7 @@ error_reporting(0);
 require_once("config/conexion.php");
 $i = 1;
 #Se traen desde la tabla landings los datos para armar el menú de acceso
-$sql = mysqli_query($con, "SELECT * FROM iflow_dash.landings;");
+$sql = mysqli_query($con, "SELECT * FROM landings;");
 while ($row = mysqli_fetch_assoc($sql)) {
 	$data[] = $row;
 }
