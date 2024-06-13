@@ -3,6 +3,7 @@ error_reporting(0);
 
 #Se cargan los datos para conectar a la base de datos
 require_once("config/conexion.php");
+$i = 1;
 #Se traen desde la tabla landings los datos para armar el menú de acceso
 $sql = mysqli_query($con, "SELECT * FROM iflow_dash.landings;");
 while ($row = mysqli_fetch_assoc($sql)) {
@@ -42,8 +43,41 @@ $tarjetas = json_decode($json_data, true);
 </head>
 
 <body class="layout-fixed sidebar-mini">
+	<style>
+		.tooltip-container {
+			position: relative;
+			display: inline-block;
+		}
+
+		.tooltip-text {
+			visibility: hidden;
+			width: 200px;
+			background-color: #000;
+			color: #fff;
+			text-align: center;
+			border-radius: 6px;
+			padding: 5px;
+			position: absolute;
+			z-index: 1;
+			bottom: 75%;
+			/* Posiciona el tooltip encima del elemento */
+			left: 50%;
+			transform: translateX(-50%);
+			opacity: 0;
+			transition: opacity 0.3s;
+		}
+
+		.tooltip-container:hover .tooltip-text {
+			visibility: visible;
+			opacity: 1;
+		}
+
+		.btn {
+			padding: 20px;
+		}
+	</style>
 	<div style="height: 100%; ">
-		<nav class="main-header navbar navbar-expand navbar-orange navbar-light">
+		<nav class="main-header navbar navbar-expand navbar-orange navbar-light" style="margin-left: 175px;">
 			<ul class="navbar-nav">
 				<li class="nav-item">
 					<span class="nav-link" data-widget="pushmenu" href="#">
@@ -56,46 +90,34 @@ $tarjetas = json_decode($json_data, true);
 				</li>
 			</ul>
 		</nav>
-		<aside class="main-sidebar sidebar-light-warning" style="border-style: solid; border-color: lightgrey; width: 240!important;">
+		<aside class="main-sidebar sidebar-light-warning" style="border-style: solid; border-color: lightgrey; width: 175px!important;">
 			<a href="home" style="background-color: black" class="brand-link logo-switch">
 				<img src="assets/img/logoIf.png" alt="Iflow Logo" class="brand-image-xs logo-xl" />
 			</a>
 			<!-- INICIO SIDEBAR -->
 			<div class="sidebar">
-				<nav class="mt-2">
-					<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false" style="margin-top:50px;">
-						<!-- FOREACH QUE RECORRE LA TABLA PARA ARMAR EL MENÚ LATERAL -->
-						<?php foreach ($data as $item) : ?>
-							<li class="nav-item">
-								<a href="#" class="nav-link">
-									<?php echo $item['icono']; ?>
-									<p>
-										<?php echo $item['plataforma']; ?>
-										<i class="right fas fa-angle-left"></i>
-									</p>
-								</a>
-								<ul class="nav nav-treeview" style="display: none;">
-									<li class="nav-item">
-										<a href="<?php echo $item['url_instalador']; ?>" class="nav-link">
-											<i class="far fa-circle nav-icon"></i>
-											<p>Instalador</p>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="<?php echo $item['url_dashboard']; ?>" class="nav-link">
-											<i class="far fa-circle nav-icon"></i>
-											<p>Dashboard</p>
-										</a>
-									</li>
-								</ul>
-							</li>
-						<?php endforeach; ?>
-					</ul>
-				</nav>
+				<div class="btn-group-vertical" role="group" aria-label="Vertical button group" style="display: flex; margin-top:20px;">
+					<!-- FOREACH QUE RECORRE LA TABLA PARA ARMAR EL MENÚ LATERAL -->
+					<?php foreach ($data as $item) : ?>
+						<div class="btn-group tooltip-container" role="group" style="display: flex;">
+							<button id="btnGroupVerticalDrop<?php echo $i; ?>" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-top:-8px;">
+								<span class="tooltip-text">
+									<?php echo $item['plataforma']; ?>
+								</span>
+								<img src="assets/img/<?php echo $item['icono']; ?>" />
+							</button>
+							<div class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop<?php echo $i; ?>" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
+								<a class="dropdown-item" href="<?php echo $item['url_instalador']; ?>">Instalador</a>
+								<a class="dropdown-item" href="<?php echo $item['url_dashboard']; ?>">Dashboard</a>
+							</div>
+						</div>
+					<?php ++$i;
+					endforeach; ?>
+				</div>
 			</div>
 		</aside>
 		<!-- INICIO PAGINA ESTADISTICAS -->
-		<div class="content-wrapper" style="padding-top: 25px">
+		<div class="content-wrapper" style="padding-top: 25px; margin-left:175px;">
 			<div class="content">
 				<div class="container-fluid">
 					<div class="row">
@@ -213,7 +235,13 @@ $tarjetas = json_decode($json_data, true);
 										</span>
 										<span class="mr-2">
 											<i class="fas fa-square" style="color: #0050C3; border-color: #0050C3"></i> TiendaNube
+											<i class="fas fa-square " style="color: #78B258; border-color: #78B258"></i> Shopify
 										</span>
+										<span class="mr-2">
+											<i class="fas fa-square" style="color: #0050C3; border-color: #0050C3"></i> TiendaNube
+										</span>
+										<span class="mr-2">
+											<i class="fas fa-square" style="color: #9A5C8E; border-color: #9A5C8E"></i> WooCommerce
 										<span class="mr-2">
 											<i class="fas fa-square" style="color: #9A5C8E; border-color: #9A5C8E"></i> WooCommerce
 										</span>
@@ -390,5 +418,6 @@ $tarjetas = json_decode($json_data, true);
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="dist/js/demo.js"></script>
 <script src="dist/js/pages/dashboard3.js"></script>
+
 
 </html>
