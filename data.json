@@ -2,7 +2,7 @@
 	"data": {
 		"exito": {
 			"tipo_orden": "Ordenes enviadas exitosamente",
-			"datos": 250
+			"datos": 1355
 		},
 		"entregadas": {
 			"tipo_orden": "Ordenes entregadas",

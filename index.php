@@ -121,12 +121,9 @@ $tarjetas = json_decode($json_data, true);
 			<div class="content">
 				<div class="container-fluid">
 					<div class="row">
-
 						<?php
 						foreach ($tarjetas as $key => $dato) :
 						?>
-
-
 							<div class="col-lg-3 col-6">
 								<div class="small-box bg-success">
 									<div class="overlay">
