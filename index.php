@@ -39,6 +39,7 @@ $tarjetas = json_decode($json_data, true);
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
 	<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 	<link rel="stylesheet" href="dist/css/adminlte.min.css?v=3.2.0">
+	<link rel="stylesheet" href="/landing/css/styles.css">
 
 </head>
 
@@ -125,10 +126,7 @@ $tarjetas = json_decode($json_data, true);
 						foreach ($tarjetas as $key => $dato) :
 						?>
 							<div class="col-lg-3 col-6">
-								<div class="small-box bg-success">
-									<div class="overlay">
-										<i></i>
-									</div>
+								<div class="small-box bg-success-landing">
 									<div class="inner">
 										<h3><?php echo $dato["exito"]["datos"]; ?></h3>
 										<p><?php echo $dato["exito"]["tipo_orden"]; ?></p>
@@ -141,10 +139,7 @@ $tarjetas = json_decode($json_data, true);
 							</div>
 
 							<div class="col-lg-3 col-6">
-								<div class="small-box bg-info">
-									<div class="overlay">
-										<i></i>
-									</div>
+								<div class="small-box bg-info-landing">
 									<div class="inner">
 										<h3><?php echo $dato["entregadas"]["datos"]; ?></h3>
 										<p><?php echo $dato["entregadas"]["tipo_orden"]; ?></p>
@@ -157,10 +152,7 @@ $tarjetas = json_decode($json_data, true);
 							</div>
 
 							<div class="col-lg-3 col-6">
-								<div class="small-box bg-warning">
-									<div class="overlay">
-										<i></i>
-									</div>
+								<div class="small-box bg-warning-landing">
 									<div class="inner">
 										<h3><?php echo $dato["transito"]["datos"]; ?></h3>
 										<p><?php echo $dato["transito"]["tipo_orden"]; ?></p>
@@ -173,10 +165,7 @@ $tarjetas = json_decode($json_data, true);
 							</div>
 
 							<div class="col-lg-3 col-6">
-								<div class="small-box bg-danger">
-									<div class="overlay">
-										<i></i>
-									</div>
+								<div class="small-box bg-danger-landing">
 									<div class="inner">
 										<h3><?php echo $dato["no_procesadas"]["datos"]; ?></h3>
 										<p><?php echo $dato["no_procesadas"]["tipo_orden"]; ?></p>

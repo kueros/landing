@@ -8461,6 +8461,11 @@ fieldset:disabled .btn {
   ) !important;
 }
 
+.bg-success-landing{
+	background-color: #69f;
+	color: #fff;
+}
+
 .bg-success {
   --bs-bg-opacity: 1;
   background-color: rgba(
@@ -8469,9 +8474,19 @@ fieldset:disabled .btn {
   ) !important;
 }
 
+.bg-info-landing{
+	background-color: #f96;
+	color: #fff;
+}
+
 .bg-info {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-info-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-warning-landing{
+	background-color: #8a5;
+	color: #fff;
 }
 
 .bg-warning {
@@ -8480,6 +8495,11 @@ fieldset:disabled .btn {
     var(--bs-warning-rgb),
     var(--bs-bg-opacity)
   ) !important;
+}
+
+.bg-danger-landing{
+	background-color: #d99;
+	color: #fff;
 }
 
 .bg-danger {
