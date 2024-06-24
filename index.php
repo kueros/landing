@@ -13,11 +13,26 @@ if (empty($data)) {
 	echo "<script>alert(\"Falta cargar las url's en la tabla landings.\")</script>";
 }
 // Leer el archivo JSON
-$json_data = file_get_contents('data.json');
+#$json_data = file_get_contents('data.json');
 
-// Decodificar el JSON
-$tarjetas = json_decode($json_data, true);
+// URL de la API
+$url = 'http://test-tienda.iflow21.com/api/services/v1/dash_order_prosess.php';
 
+// Hacer la solicitud GET
+$response = file_get_contents($url);
+
+// Verificar si la solicitud fue exitosa
+if ($response === FALSE) {
+    die('Error al obtener los datos.');
+}
+
+// Decodificar el JSON en un array asociativo
+$datos_tarjetas = json_decode($response, true);
+
+// Verificar si hubo un error al decodificar el JSON
+if (json_last_error() !== JSON_ERROR_NONE) {
+    die('Error al decodificar JSON: ' . json_last_error_msg());
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -123,7 +138,7 @@ $tarjetas = json_decode($json_data, true);
 				<div class="container-fluid">
 					<div class="row">
 						<?php
-						foreach ($tarjetas as $key => $dato) :
+						foreach ($datos_tarjetas as $key => $dato) :
 						?>
 							<div class="col-lg-3 col-6">
 								<div class="small-box bg-success-landing">
