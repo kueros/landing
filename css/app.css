@@ -97,6 +97,7 @@ body {
     height: 32px;
     background: url("../img/logoIf.png");
     background-size: cover;
+    align-content: center;
 }
 
 .main-nav-list {
